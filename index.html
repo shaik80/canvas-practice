@@ -6,11 +6,21 @@
     <title>Game practice</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='./style/style.css'>
-    
+    <script>
+        window.onload = function() {
+        var c = document.getElementById("game-area");
+        var ctx = c.getContext("2d");
+        var img = document.getElementById("grass");
+        ctx.drawImage(img, 10, 10);
+      }
+    </script>
 </head>
 <body>
-    <canvas id="game-area"></canvas>
-    <img src="./img/grass.png">
+        <img class = "hidden"
+        id = "goofyPic"
+        src = "./img/grass.png"
+        alt = "Goofy pic of me" />
+    <canvas id="game-area" height="630" width="650" style="border:1px solid #000000;"></canvas>
     <script src='./script/app.js'></script>
 </body>
 </html>
