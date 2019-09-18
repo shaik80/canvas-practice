@@ -10,15 +10,6 @@ let grd = ctx.createLinearGradient(500,0,700,700);
           grd.addColorStop(1,"white");
 const VACANT = grd; // color of an empty square
 
-const cvs = document.getElementById("tetris");
-const ctx = cvs.getContext("2d");
-const scoreElement = document.getElementById("score");
-
-const ROW = 20;
-const COL = COLUMN = 10;
-const SQ = squareSize = 20;
-const VACANT = "WHITE"; // color of an empty square
-
 // draw a square
 function drawSquare(x,y,color){
     ctx.fillStyle = color;
