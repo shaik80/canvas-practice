@@ -15,7 +15,7 @@ function drawSquare(x,y,color){
     ctx.fillStyle = color;
     ctx.fillRect(x*SQ,y*SQ,SQ,SQ);
 
-    ctx.strokeStyle = "BLACK";
+    ctx.strokeStyle = "white";
     ctx.strokeRect(x*SQ,y*SQ,SQ,SQ);
 }
 
@@ -59,13 +59,12 @@ function randomPiece(){
     return new Piece( PIECES[r][0],PIECES[r][1]);
 }
 
-let p = randomPiece();
-
+let p = randomPiece()
 // The Object Piece
 
 function Piece(tetromino,color){
     this.tetromino = tetromino;
-    this.color = color;
+    this.color = color
     
     this.tetrominoN = 0; // we start from the first pattern
     this.activeTetromino = this.tetromino[this.tetrominoN];
@@ -262,7 +261,7 @@ let gameOver = false;
 function drop(){
     let now = Date.now();
     let delta = now - dropStart;
-    if(delta > 1000){
+    if(delta > 500){
         p.moveDown();
         dropStart = Date.now();
     }
