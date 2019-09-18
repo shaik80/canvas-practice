@@ -14,7 +14,6 @@ const VACANT = grd; // color of an empty square
 function drawSquare(x,y,color){
     ctx.fillStyle = color;
     ctx.fillRect(x*SQ,y*SQ,SQ,SQ);
-
     ctx.strokeStyle = "white";
     ctx.strokeRect(x*SQ,y*SQ,SQ,SQ);
 }
@@ -136,7 +135,6 @@ Piece.prototype.moveLeft = function(){
 Piece.prototype.rotate = function(){
     let nextPattern = this.tetromino[(this.tetrominoN + 1)%this.tetromino.length];
     let kick = 0;
-    
     if(this.collision(0,0,nextPattern)){
         if(this.x > COL/2){
             // it's the right wall
