@@ -23,8 +23,8 @@ function draw(){
     var goofyPic = document.getElementById("goofyPic");
     con.drawImage(goofyPic, 0, 0, 50, 50);
     var image2 = new Image();
-    image2.src = "andyGoofy.jpg";
+    image2.src = "grass.png";
     con.drawImage(image2, 100, 100, 70, 50);
   } // end draw
- }
+//  }
  
