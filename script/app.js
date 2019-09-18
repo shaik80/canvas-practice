@@ -14,6 +14,7 @@ const VACANT = grd; // color of an empty square
 function drawSquare(x,y,color){
     ctx.fillStyle = color;
     ctx.fillRect(x*SQ,y*SQ,SQ,SQ);
+
     ctx.strokeStyle = "BLACK";
     ctx.strokeRect(x*SQ,y*SQ,SQ,SQ);
 }
@@ -37,7 +38,7 @@ function drawBoard(){
     }
 }
 
-drawBoard();
+
 
 // the pieces and their colors
 
@@ -68,8 +69,7 @@ function Piece(tetromino,color){
     
     this.tetrominoN = 0; // we start from the first pattern
     this.activeTetromino = this.tetromino[this.tetrominoN];
-    
-    // we need to control the pieces
+        // we need to control the pieces
     this.x = 3;
     this.y = -2;
 }
@@ -272,3 +272,4 @@ function drop(){
 }
 
 drop();
+drawBoard();
